@@ -32,17 +32,21 @@
     U+FEFF, U+FFFD;
 }
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
+}
+
+html {
   font-size: 20px;
-  _font-family: "Shadows Into Light", cursive;
-  font-family: "Karla", sans-serif;
+  font-family: "Karla", sans-serif inherit;
+  color: darkblue;
 }
 
 body {
   margin: 0;
   background-color: lightblue;
-  color: darkblue;
 }
 
 h1 {
@@ -62,14 +66,70 @@ h6 {
   font-family: "La Belle Aurore", cursive;
 }
 
+*::selection {
+  background-color: plum;
+  color: beige;
+}
+
+a:link {
+  /*unbesuchte Links*/
+  color: dodgerblue;
+}
+
+a:visited {
+  /*besuchte Links*/
+  color: white;
+}
+a:hover {
+  background-color: blue;
+}
+a:active {
+  /*Element wird gerade aktiviert*/
+  color: orange;
+}
+
+nav {
+  padding: 1em;
+  background-color: rgb(147, 69, 181);
+}
+
+article + article {
+  border-top: 0.25em darkblue dotted;
+}
+
 .myheader {
   text-align: center;
-  background-color: blueviolet;
-  padding: 48px 16px;
+  background-color: rgb(89, 6, 168);
+  padding: 48px 0px;
 }
 
 .main {
   max-width: 800px;
   margin: 0 auto;
   padding: 16px;
+}
+
+a.navigation {
+  margin-right: 6em;
+  background-color: orange;
+  color: black;
+  padding: 0.5em;
+  margin: 1em;
+  display: inline-block;
+}
+
+a.navigation:link {
+  text-decoration: none;
+}
+
+a.navigation:visited {
+  text-decoration-thickness: 50%;
+}
+
+a.navigation:hover {
+  background-color: red;
+}
+
+a.navigation.special:hover {
+  background-color: blue;
 }
