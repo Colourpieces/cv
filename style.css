@@ -93,6 +93,10 @@ nav {
   background-color: rgb(147, 69, 181);
 }
 
+article {
+  position: relative;
+}
+
 article + article {
   border-top: 0.25em darkblue dotted;
 }
@@ -100,7 +104,9 @@ article + article {
 .myheader {
   text-align: center;
   background-color: rgb(89, 6, 168);
-  padding: 48px 0px;
+  padding-top: 48px;
+  position: sticky;
+  top: 0;
 }
 
 .main {
@@ -132,4 +138,9 @@ a.navigation:hover {
 
 a.navigation.special:hover {
   background-color: blue;
+}
+
+section header > * {
+  display: inline;
+  margin-right: 1em;
 }
