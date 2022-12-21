@@ -19,20 +19,24 @@
         <p>A fictional CV of a frontend developer</p>
 
         <nav>
-
             <a class="navigation" href="#profile">My profile</a>
             <a class="navigation special" href="#experiences">My experiences</a>
             <a class="navigation" href="#skills">My skills</a>
             <a class="navigation" href="#contact">Contact me</a>
-
-
         </nav>
+        <aside>
+            <a class="btn-contact"
+                href="mailto:test@test-domain.de?subject=Hallo%20Freunde&body=Bitte%20trage%20hier%20alles%20ein.">E-Mail
+                me!</a>
+            <!--Generator für mailto https://mailtolink.me/-->
+        </aside>
+
     </header>
 
     <main class="main">
         <!--primaerer Content der Seite-->
         <article id="profile">
-            <h2>Profile</h2>
+            <h2 class="article-heading">Profile</h2>
             <p>
                 I travelled around the world and worked in many different jobs until I discovered that frontend
                 development in web is really awesome. I teached myself how the <a href="#technical-skills">web</a>
@@ -59,11 +63,11 @@
         </article>
 
         <article id="experiences">
-            <h2>Experiences</h2>
+            <h2 class="article-heading">Experiences</h2>
             <section>
                 <header>
-                    <h3>High School in California</h3>
-                    <p>2000 - 2012</p>
+                    <h3 class="section-heading">High School in California</h3>
+                    <p class="timeperiod">2000 - 2012</p>
                 </header>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
                     labore et dolore magna aliquyam erat, sed diam voluptua.</p>
@@ -71,8 +75,8 @@
 
             <section>
                 <header>
-                    <h3>University: Bachelor of Arts in Communication Design</h3>
-                    <p>2012 - 2015</p>
+                    <h3 class="section-heading">University: Bachelor of Arts in Communication Design</h3>
+                    <p class="timeperiod">2012 - 2015</p>
                 </header>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
                     labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -88,8 +92,8 @@
 
             <section>
                 <header>
-                    <h3>Bachelor of Science in Applied Computer Science</h3>
-                    <p>2015 - 2022</p>
+                    <h3 class="section-heading">Bachelor of Science in Applied Computer Science</h3>
+                    <p class="timeperiod">2015 - 2022</p>
                 </header>
                 <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
                     sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
@@ -101,7 +105,7 @@
         </article>
 
         <article id="skills">
-            <h2>Skills</h2>
+            <h2 class="article-heading">Skills</h2>
             <section id="technical-skills">
                 <h3>Technical Skills</h3>
                 <ul>
@@ -121,12 +125,14 @@
         </article>
 
         <article id="contact">
-            <h2>Contact</h2>
-            <ul>
-                <li>post adress: Bakerstreet 22 a, 127589 London, England</li>
-                <li>e-mail: <a href="mailto:cv@peter-pan.de">cv@peter-pan.de</a></li>
-                <li>phone: 0168 741 548 678</li>
-            </ul>
+            <h2 class="article-heading">Contact</h2>
+            <section id="contact-infoormation">
+                <ul>
+                    <li>post adress: Bakerstreet 22 a, 127589 London, England</li>
+                    <li>e-mail: <a href="mailto:cv@peter-pan.de">cv@peter-pan.de</a></li>
+                    <li>phone: <a href="tel:0168 741 548 678">0168 741 548 678</a></li>
+                </ul>
+            </section>
         </article>
 
     </main>
