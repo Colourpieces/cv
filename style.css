@@ -51,11 +51,11 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h1,
@@ -90,7 +90,7 @@ a:active {
 }
 
 nav {
-  padding: 1em;
+  padding: 1rem;
   background-color: rgb(147, 69, 181);
 }
 
@@ -99,7 +99,7 @@ article {
 }
 
 article + article {
-  border-top: 0.25em darkblue dotted;
+  border-top: 0.25rem darkblue dotted;
 }
 
 section + header {
@@ -112,7 +112,7 @@ section + header {
 }*/
 
 article > * {
-  padding-left: 2em;
+  padding-left: 2rem;
 }
 
 /*article > h2 {
@@ -120,18 +120,18 @@ article > * {
 }*/
 
 .main {
-  max-width: 800px;
+  max-width: 75ch;
   margin: 0 auto;
-  padding: 16px;
+  padding: 1rem;
 }
 
 a.navigation {
-  margin-right: 6em;
+  margin-right: 6rem;
   background-color: orange;
   color: black;
   border: solid darkorange;
-  padding: 0.5em;
-  margin: 1em;
+  padding: 0.5rem;
+  margin: 1rem;
   display: inline-block;
 }
 
@@ -154,19 +154,31 @@ a.navigation.special:hover {
 .myheader {
   text-align: center;
   background-color: rgb(89, 6, 168);
-  padding-top: 48px;
+  padding-top: 2rem;
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
+.heading-group {
+  font-size: 5rem;
+}
+
+.title {
+  font-size: 1em;
+}
+
+.subtitle {
+  font-size: 0.25em;
+}
+
 a.btn-contact {
   position: absolute;
-  top: 1em;
-  right: 1em;
-  padding: 0.5em;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
   background-color: aquamarine;
-  border: solid darkcyan 0.15em;
+  border: solid darkcyan 0.15rem;
   text-decoration: none;
   color: rgb(89, 6, 168);
   font-weight: bold;
@@ -178,14 +190,14 @@ a.btn-contact:hover {
 
 .article-heading {
   position: relative;
-  left: -2em;
+  left: -2rem;
 }
 
 p.timeperiod {
   display: inline;
-  padding-left: 5px;
-  margin-left: 5px;
-  border-left: 0.05em solid darkblue;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  border-left: 0.05rem solid darkblue;
 }
 
 .section-heading {
