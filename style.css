@@ -39,7 +39,7 @@
 }
 
 html {
-  font-size: 20px;
+  font-size: 14px;
   font-family: inherit;
   font-family: "Karla", sans-serif;
   color: darkblue;
@@ -125,6 +125,7 @@ article > * {
   max-width: 75ch;
 }
 
+/* wird gerade wohl nicht beachtet */
 .scroller {
   height: 100px;
   overflow-y: scroll;
@@ -181,12 +182,11 @@ a.navigation.special:hover {
 }
 
 a.btn-contact {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  display: inline-block;
   padding: 0.5rem;
   background-color: aquamarine;
   border: solid darkcyan 0.15rem;
+  margin: 1rem;
   text-decoration: none;
   color: rgb(89, 6, 168);
   font-weight: bold;
@@ -223,7 +223,39 @@ p.timeperiod {
     display: none;
   }
 
+  article + article {
+    border-top: 0.25rem black dotted;
+  }
+
   .myheader {
     background-color: #ccc;
+  }
+}
+
+/* medium breakpoint */
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 16px;
+  }
+
+  article + article {
+    margin-top: 5rem;
+  }
+}
+
+/* large breakpoint */
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+  article + article {
+    margin-top: 10rem;
+  }
+
+  a.btn-contact {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    margin: 0;
   }
 }
