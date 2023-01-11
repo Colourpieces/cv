@@ -361,6 +361,27 @@ p.timeperiod {
   align-items: space-evenly;
 }
 
+/*
+.theme {
+  all: unset;
+}*/
+
+.schieberegler {
+  width: 30px;
+  border: red 2px solid;
+  background-color: white;
+  aspect-ratio: 1; /* Größenverhältnis -->1 = Quadrat */
+}
+
+#dark-theme:checked + label > .schieberegler {
+  /* 
+  wenn Radio-button aktiviert: 
+  dann wähle dazugehöriges Label 
+  und davon das Child mit Class schieberegler (also das div)
+  */
+  background-color: darkblue;
+}
+
 /* medium breakpoint */
 @media screen and (min-width: 786px) {
   html {
