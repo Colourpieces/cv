@@ -34,6 +34,10 @@
 }
 */
 
+/*
+Farbpalette: https://coolors.co/palette/d9ed92-b5e48c-99d98c-76c893-52b69a-34a0a4-168aad-1a759f-1e6091-184e77
+*/
+
 *,
 *:before,
 *:after {
@@ -44,7 +48,7 @@ html {
   font-size: 14px;
   font-family: inherit;
   font-family: "Karla", sans-serif;
-  color: darkblue;
+  color: #184e77;
 }
 
 body {
@@ -58,6 +62,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  color: #168aad;
 }
 
 h1,
@@ -76,7 +81,7 @@ h6 {
 
 a:link {
   /*unbesuchte Links*/
-  color: dodgerblue;
+  color: #168aad;
 }
 
 a:visited {
@@ -84,7 +89,7 @@ a:visited {
   color: white;
 }
 a:hover {
-  background-color: blue;
+  background-color: #99d98c;
 }
 a:active {
   /*Element wird gerade aktiviert*/
@@ -93,7 +98,65 @@ a:active {
 
 nav {
   padding: 1rem;
-  background-color: darkgray;
+  background: radial-gradient(#34a0a4 3px, transparent 4px),
+    radial-gradient(#34a0a4 3px, transparent 4px),
+    linear-gradient(#1a759f 4px, transparent 0),
+    linear-gradient(
+      45deg,
+      transparent 74px,
+      transparent 75px,
+      #34a0a4 75px,
+      #34a0a4 76px,
+      transparent 77px,
+      transparent 109px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75px,
+      transparent 76px,
+      #34a0a4 76px,
+      #34a0a4 77px,
+      transparent 78px,
+      transparent 109px
+    ),
+    #1a759f;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+footer {
+  height: 4rem;
+  text-align: center;
+  padding-top: 0.2rem;
+
+  background: radial-gradient(#34a0a4 3px, transparent 4px),
+    radial-gradient(#34a0a4 3px, transparent 4px),
+    linear-gradient(#1a759f 4px, transparent 0),
+    linear-gradient(
+      45deg,
+      transparent 74px,
+      transparent 75px,
+      #34a0a4 75px,
+      #34a0a4 76px,
+      transparent 77px,
+      transparent 109px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75px,
+      transparent 76px,
+      #34a0a4 76px,
+      #34a0a4 77px,
+      transparent 78px,
+      transparent 109px
+    ),
+    #1a759f;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+.footer-contact::before {
+  content: ":purple_heart:";
 }
 
 article {
@@ -101,7 +164,7 @@ article {
 }
 
 article + article {
-  border-top: 0.25rem darkblue dotted;
+  border-top: 0.25rem #184e77 dotted;
 }
 
 section + header {
@@ -142,25 +205,22 @@ article > * {
 ::-webkit-scrollbar {
   width: 0.6rem;
   border-radius: 0.5rem;
-  background-color: hsl(207, 4%, 75%);
-  background-color: salmon;
+  background-color: #76c893;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: hsl(207, 4%, 65%);
-  background-color: dodgerblue;
+  background-color: #d9ed92;
   border-radius: 0.5rem;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(207, 4%, 50%);
   background-color: greenyellow;
   border-radius: 0.5rem;
 }
 
 a.navigation-link {
   margin-right: 6rem;
-  background-color: orange;
-  color: black;
-  border: solid darkorange;
+  background-color: #d9ed92;
+  color: #1a759f;
+  border: solid #99d98c;
   padding: 0.5rem;
   margin: 1rem;
   display: inline-block;
@@ -171,21 +231,26 @@ a.navigation-link:link {
 }
 
 a.navigation-link:visited {
-  text-decoration-thickness: 50%;
+  color: darkorange;
 }
 
 a.navigation-link:hover {
-  background-color: red;
+  background-color: #76c893;
 }
 
 a.navigation-link.special:hover {
-  background-color: blue;
+  background-color: greenyellow;
 }
 
 .myheader {
   text-align: center;
   /*background-color: rgb(89, 6, 168);*/
-  background-color: grey;
+  background: rgb(52, 160, 164);
+  background: linear-gradient(
+    90deg,
+    rgba(52, 160, 164, 1) 6%,
+    rgba(30, 96, 145, 1) 75%
+  );
   padding-top: 2rem;
   position: sticky;
   top: 0;
@@ -213,16 +278,27 @@ a.navigation-link.special:hover {
 a.btn-contact {
   display: inline-block;
   padding: 0.5rem;
-  background-color: aquamarine;
-  border: solid darkcyan 0.15rem;
+  background-color: #b5e48c;
+  border: solid #99d98c 0.15rem;
   margin: 1rem;
   text-decoration: none;
-  color: rgb(89, 6, 168);
+  color: #184e77;
   font-weight: bold;
 }
 
 a.btn-contact:hover {
-  background-color: orange;
+  background-color: darkorange;
+}
+
+.bild {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 100%;
+  background-image: url(https://images.pexels.com/photos/10907619/pexels-photo-10907619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-position: top right;
+  border: 0.2rem solid #184e77;
+  align-items: center;
 }
 
 .article-heading {
@@ -306,6 +382,12 @@ p.timeperiod {
     top: 1rem;
     right: 1rem;
     margin: 0;
+  }
+
+  .bild {
+    position: absolute;
+    top: 3rem;
+    left: 20ch;
   }
 }
 
