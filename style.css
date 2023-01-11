@@ -38,6 +38,20 @@
 Farbpalette: https://coolors.co/palette/d9ed92-b5e48c-99d98c-76c893-52b69a-34a0a4-168aad-1a759f-1e6091-184e77
 */
 
+:root {
+  --hellgelbgruen: #d9ed92;
+  --gelbgruen: #b5e48c;
+  --gruen: #99d98c;
+  --mint: #76c893;
+  --hellestuerkis: #52b69a;
+  --tuerkis: #34a0a4;
+  --petrol: #168aad;
+  --dunkelpetrol: #1a759f;
+  --blau: #1e6091;
+  --dunkelblau: #184e77;
+
+  --hintergrund-text: lightgray;
+}
 *,
 *:before,
 *:after {
@@ -48,7 +62,7 @@ html {
   font-size: 14px;
   font-family: inherit;
   font-family: "Karla", sans-serif;
-  color: #184e77;
+  color: var(--dunkelblau);
 }
 
 body {
@@ -62,7 +76,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  color: #168aad;
+  color: var(--petrol);
 }
 
 h1,
@@ -81,7 +95,7 @@ h6 {
 
 a:link {
   /*unbesuchte Links*/
-  color: #168aad;
+  color: var(--petrol);
 }
 
 a:visited {
@@ -89,24 +103,24 @@ a:visited {
   color: white;
 }
 a:hover {
-  background-color: #99d98c;
+  background-color: var(--gruen);
 }
 a:active {
   /*Element wird gerade aktiviert*/
-  color: orange;
+  color: darkorange;
 }
 
 nav {
   padding: 1rem;
-  background: radial-gradient(#34a0a4 3px, transparent 4px),
-    radial-gradient(#34a0a4 3px, transparent 4px),
-    linear-gradient(#1a759f 4px, transparent 0),
+  background: radial-gradient(var(--tuerkis) 3px, transparent 4px),
+    radial-gradient(var(--tuerkis) 3px, transparent 4px),
+    linear-gradient(var(--dunkelpetrol) 4px, transparent 0),
     linear-gradient(
       45deg,
       transparent 74px,
       transparent 75px,
-      #34a0a4 75px,
-      #34a0a4 76px,
+      var(--tuerkis) 75px,
+      var(--tuerkis) 76px,
       transparent 77px,
       transparent 109px
     ),
@@ -114,12 +128,12 @@ nav {
       -45deg,
       transparent 75px,
       transparent 76px,
-      #34a0a4 76px,
-      #34a0a4 77px,
+      var(--tuerkis) 76px,
+      var(--tuerkis) 77px,
       transparent 78px,
       transparent 109px
     ),
-    #1a759f;
+    var(--dunkelpetrol);
   background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 }
@@ -129,15 +143,15 @@ footer {
   text-align: center;
   padding-top: 0.2rem;
 
-  background: radial-gradient(#34a0a4 3px, transparent 4px),
-    radial-gradient(#34a0a4 3px, transparent 4px),
-    linear-gradient(#1a759f 4px, transparent 0),
+  background: radial-gradient(var(--tuerkis) 3px, transparent 4px),
+    radial-gradient(var(--tuerkis) 3px, transparent 4px),
+    linear-gradient(var(--dunkelpetrol) 4px, transparent 0),
     linear-gradient(
       45deg,
       transparent 74px,
       transparent 75px,
-      #34a0a4 75px,
-      #34a0a4 76px,
+      var(--tuerkis) 75px,
+      var(--tuerkis) 76px,
       transparent 77px,
       transparent 109px
     ),
@@ -145,12 +159,12 @@ footer {
       -45deg,
       transparent 75px,
       transparent 76px,
-      #34a0a4 76px,
-      #34a0a4 77px,
+      var(--tuerkis) 76px,
+      var(--tuerkis) 77px,
       transparent 78px,
       transparent 109px
     ),
-    #1a759f;
+    var(--dunkelpetrol);
   background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 }
@@ -164,7 +178,7 @@ article {
 }
 
 article + article {
-  border-top: 0.25rem #184e77 dotted;
+  border-top: 0.25rem var(--dunkelblau) dotted;
 }
 
 section + header {
@@ -205,10 +219,10 @@ article > * {
 ::-webkit-scrollbar {
   width: 0.6rem;
   border-radius: 0.5rem;
-  background-color: #76c893;
+  background-color: var(--mint);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #d9ed92;
+  background-color: var(--gelbgruen);
   border-radius: 0.5rem;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -218,9 +232,9 @@ article > * {
 
 a.navigation-link {
   margin-right: 6rem;
-  background-color: #d9ed92;
-  color: #1a759f;
-  border: solid #99d98c;
+  background-color: var(--gelbgruen);
+  color: var(--dunkelpetrol);
+  border: solid var(--gruen);
   padding: 0.5rem;
   margin: 1rem;
   display: inline-block;
@@ -235,7 +249,7 @@ a.navigation-link:visited {
 }
 
 a.navigation-link:hover {
-  background-color: #76c893;
+  background-color: var(--mint);
 }
 
 a.navigation-link.special:hover {
@@ -278,11 +292,11 @@ a.navigation-link.special:hover {
 a.btn-contact {
   display: inline-block;
   padding: 0.5rem;
-  background-color: #b5e48c;
-  border: solid #99d98c 0.15rem;
+  background-color: var(--gelbgruen);
+  border: solid var(--gruen) 0.15rem;
   margin: 1rem;
   text-decoration: none;
-  color: #184e77;
+  color: var(--dunkelblau);
   font-weight: bold;
 }
 
@@ -297,7 +311,7 @@ a.btn-contact:hover {
   background-image: url(https://images.pexels.com/photos/10907619/pexels-photo-10907619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-size: cover;
   background-position: top right;
-  border: 0.2rem solid #184e77;
+  border: 0.2rem solid var(--dunkelblau);
   align-items: center;
 }
 
@@ -326,7 +340,9 @@ p.timeperiod {
     background-color: white;
   }
   nav,
-  aside {
+  aside,
+  .bild,
+  footer {
     display: none;
   }
 
