@@ -21,6 +21,7 @@
     U+FEFF, U+FFFD;
 }
 
+/*
 @font-face {
   font-family: "Shadows Into Light";
   font-style: normal;
@@ -31,6 +32,7 @@
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;
 }
+*/
 
 *,
 *:before,
@@ -47,7 +49,7 @@ html {
 
 body {
   margin: 0;
-  background-color: lightblue;
+  background-color: lightgray;
 }
 
 h1 {
@@ -91,7 +93,7 @@ a:active {
 
 nav {
   padding: 1rem;
-  background-color: rgb(147, 69, 181);
+  background-color: darkgray;
 }
 
 article {
@@ -126,15 +128,35 @@ article > * {
 }
 
 /* wird gerade wohl nicht beachtet */
+/*
 .scroller {
   height: 100px;
   overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
+  scrollbar-color: rgb(84, 224, 198) green;
   scrollbar-width: thin;
   scroll-margin-top: 1300px;
+  -webkit-line-break: ;
+}
+*/
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(207, 4%, 75%);
+  background-color: salmon;
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(207, 4%, 65%);
+  background-color: dodgerblue;
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(207, 4%, 50%);
+  background-color: greenyellow;
+  border-radius: 0.5rem;
 }
 
-a.navigation {
+a.navigation-link {
   margin-right: 6rem;
   background-color: orange;
   color: black;
@@ -144,25 +166,26 @@ a.navigation {
   display: inline-block;
 }
 
-a.navigation:link {
+a.navigation-link:link {
   text-decoration: none;
 }
 
-a.navigation:visited {
+a.navigation-link:visited {
   text-decoration-thickness: 50%;
 }
 
-a.navigation:hover {
+a.navigation-link:hover {
   background-color: red;
 }
 
-a.navigation.special:hover {
+a.navigation-link.special:hover {
   background-color: blue;
 }
 
 .myheader {
   text-align: center;
-  background-color: rgb(89, 6, 168);
+  /*background-color: rgb(89, 6, 168);*/
+  background-color: grey;
   padding-top: 2rem;
   position: sticky;
   top: 0;
@@ -179,6 +202,12 @@ a.navigation.special:hover {
 
 .subtitle {
   font-size: 0.25em;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
 }
 
 a.btn-contact {
@@ -201,12 +230,14 @@ a.btn-contact:hover {
   left: -2rem;
 }
 
+/*
 p.timeperiod {
   display: inline;
   padding-left: 0.5rem;
   margin-left: 0.5rem;
   border-left: 0.05rem solid darkblue;
 }
+*/
 
 .section-heading {
   display: inline;
@@ -232,6 +263,12 @@ p.timeperiod {
   }
 }
 
+.experience-title {
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+}
+
 /* medium breakpoint */
 @media screen and (min-width: 786px) {
   html {
@@ -240,6 +277,18 @@ p.timeperiod {
 
   article + article {
     margin-top: 5rem;
+  }
+
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .experience-title {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
   }
 }
 
@@ -259,3 +308,20 @@ p.timeperiod {
     margin: 0;
   }
 }
+
+/*
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(207, 4%, 75%);
+  background-color: pink;
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(207, 4%, 65%);
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(207, 4%, 50%);
+  border-radius: 0.5rem;
+}
+*/

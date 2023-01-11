@@ -21,11 +21,11 @@
         </div>
 
 
-        <nav>
-            <a class="navigation" href="#profile">My profile</a>
-            <a class="navigation special" href="#experiences">My experiences</a>
-            <a class="navigation" href="#skills">My skills</a>
-            <a class="navigation" href="#contact">Contact me</a>
+        <nav class="navigation">
+            <a class="navigation-link" href="#profile">My profile</a>
+            <a class="navigation-link special" href="#experiences">My experiences</a>
+            <a class="navigation-link" href="#skills">My skills</a>
+            <a class="navigation-link" href="#contact">Contact me</a>
             <!--ToDo: Buttons springen nicht an die richtige Stelle. Bzw Header verdeckt den oberen Abschnitt-->
         </nav>
         <aside>
@@ -37,7 +37,7 @@
 
     </header>
 
-    <main class="main">
+    <main class="main scroller">
         <!--primaerer Content der Seite-->
         <article id="profile">
             <h2 class="article-heading">Profile</h2>
@@ -69,7 +69,7 @@
         <article id="experiences">
             <h2 class="article-heading">Experiences</h2>
             <section>
-                <header>
+                <header class="experience-title">
                     <h3 class="section-heading">High School in California</h3>
                     <p class="timeperiod">2000 - 2012</p>
                 </header>
@@ -78,7 +78,7 @@
             </section>
 
             <section>
-                <header>
+                <header class="experience-title">
                     <h3 class="section-heading">University: Bachelor of Arts in Communication Design</h3>
                     <p class="timeperiod">2012 - 2015</p>
                 </header>
@@ -95,7 +95,7 @@
             </section>
 
             <section>
-                <header>
+                <header class="experience-title">
                     <h3 class="section-heading">Bachelor of Science in Applied Computer Science</h3>
                     <p class="timeperiod">2015 - 2022</p>
                 </header>
