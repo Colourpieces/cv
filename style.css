@@ -243,7 +243,7 @@ a.navigation-link {
   padding: 0.5rem;
   margin: 1rem;
   display: inline-block;
-  transition: background-color 2s, border-width 2s;
+  transition: background-color 2s, transform 1s;
 }
 
 a.navigation-link:link {
@@ -255,8 +255,8 @@ a.navigation-link:visited {
 }
 
 a.navigation-link:hover {
-  background-color: var(--mint);
-  border: solid var(--tuerkis) 1rem;
+  background-color: var(--petrol);
+  transform: scale(1.2);
 }
 
 a.navigation-link:focus {
@@ -413,6 +413,14 @@ p.timeperiod {
   und davon das Child mit Class schieberegler (also den span im span)
   */
   left: calc(100% - 10px - 5px);
+}
+
+.myheader .btn-contact {
+  transition: transform 1s;
+}
+
+.myheader:hover .btn-contact {
+  transform: translate(-75%, 50%) scale(1.5);
 }
 
 /* medium breakpoint */
