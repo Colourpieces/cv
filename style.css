@@ -256,12 +256,16 @@ a.navigation-link:visited {
 
 a.navigation-link:hover {
   background-color: var(--petrol);
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 a.navigation-link:focus {
   background-color: var(--mint);
-  border: solid darkorange 1rem;
+  border: solid darkorange 0.12rem;
+}
+
+a.navigation-link:focus-within {
+  transform: skew(20deg);
 }
 
 a.navigation-link.special:hover {
@@ -420,7 +424,11 @@ p.timeperiod {
 }
 
 .myheader:hover .btn-contact {
-  transform: translate(-75%, 50%) scale(1.5);
+  transform: scale(1.5);
+}
+
+.myheader:focus-within .btn-contact {
+  transform: scale(1.4);
 }
 
 /* medium breakpoint */
@@ -466,6 +474,10 @@ p.timeperiod {
     position: absolute;
     top: 3rem;
     left: 20ch;
+  }
+
+  .myheader:hover .btn-contact {
+    transform: translate(-75%, 50%) scale(1.5);
   }
 }
 
