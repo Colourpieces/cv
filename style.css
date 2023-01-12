@@ -51,6 +51,8 @@ Farbpalette: https://coolors.co/palette/d9ed92-b5e48c-99d98c-76c893-52b69a-34a0a
   --dunkelblau: #184e77;
 
   --hintergrund-text: lightgray;
+  --normaler-text: var(--dunkelblau);
+  --ueberschrift: var(--petrol);
 }
 *,
 *:before,
@@ -62,12 +64,12 @@ html {
   font-size: 14px;
   font-family: inherit;
   font-family: "Karla", sans-serif;
-  color: var(--dunkelblau);
+  color: var(--normaler-text);
 }
 
 body {
   margin: 0;
-  background-color: lightgray;
+  background-color: var(--hintergrund-text);
 }
 
 h1 {
@@ -76,7 +78,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  color: var(--petrol);
+  color: var(--ueberschrift);
 }
 
 h1,
@@ -112,6 +114,9 @@ a:active {
 
 nav {
   padding: 1rem;
+
+  /* https://projects.verou.me/css3patterns/#cross-dots */
+  /* meine einfache Version siehe unten*/
   background: radial-gradient(var(--tuerkis) 3px, transparent 4px),
     radial-gradient(var(--tuerkis) 3px, transparent 4px),
     linear-gradient(var(--dunkelpetrol) 4px, transparent 0),
@@ -234,10 +239,11 @@ a.navigation-link {
   margin-right: 6rem;
   background-color: var(--gelbgruen);
   color: var(--dunkelpetrol);
-  border: solid var(--gruen);
+  border: solid var(--hellestuerkis) 0.12rem;
   padding: 0.5rem;
   margin: 1rem;
   display: inline-block;
+  transition: background-color 2s, border-width 2s;
 }
 
 a.navigation-link:link {
@@ -250,6 +256,12 @@ a.navigation-link:visited {
 
 a.navigation-link:hover {
   background-color: var(--mint);
+  border: solid var(--tuerkis) 1rem;
+}
+
+a.navigation-link:focus {
+  background-color: var(--mint);
+  border: solid darkorange 1rem;
 }
 
 a.navigation-link.special:hover {
@@ -366,20 +378,41 @@ p.timeperiod {
   all: unset;
 }*/
 
-.schieberegler {
-  width: 30px;
-  border: red 2px solid;
-  background-color: white;
-  aspect-ratio: 1; /* Größenverhältnis -->1 = Quadrat */
+.schieberegler-rand {
+  width: 50px;
+  height: 20px;
+  border: 2px solid var(--dunkelblau);
+  border-radius: 50px;
+
+  display: inline-block;
+
+  position: relative;
 }
 
-#dark-theme:checked + label > .schieberegler {
+.schieberegler-ball {
+  background-color: var(--dunkelblau);
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  display: inline-block;
+
+  position: absolute;
+  top: 50%;
+  left: 5px;
+
+  transform: translateY(-50%);
+  transition: left 0.2s;
+}
+
+#user-theme:checked + label .schieberegler-ball {
   /* 
-  wenn Radio-button aktiviert: 
+  wenn Checkbox aktiviert: 
   dann wähle dazugehöriges Label 
-  und davon das Child mit Class schieberegler (also das div)
+  und davon das Child mit Class schieberegler (also den span im span)
   */
-  background-color: darkblue;
+  left: calc(100% - 10px - 5px);
 }
 
 /* medium breakpoint */
@@ -428,6 +461,14 @@ p.timeperiod {
   }
 }
 
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    --hintergrund-text: var(--blau);
+    --normaler-text: white;
+    --ueberschrift: var(--gelbgruen);
+  }
+}
+
 /*
 ::-webkit-scrollbar {
   width: 0.6rem;
@@ -442,5 +483,23 @@ p.timeperiod {
 ::-webkit-scrollbar-thumb:hover {
   background-color: hsl(207, 4%, 50%);
   border-radius: 0.5rem;
+}
+*/
+
+/*
+CSS Hintergrund in simpel
+
+.meins{
+  height: 300px;
+  background:
+            radial-gradient(green, green 10%, transparent 10%),                     Punkt Mitte
+            radial-gradient(red, red 10%, transparent 10%),                         Punkt unten rechts
+            linear-gradient(45deg, transparent 49%, blue 50%, transparent 51%),     Linie 1
+            linear-gradient(-45deg, transparent 49%, purple 50%, transparent 51%),  Linie 2
+            lightblue;                                                              Hintergrund
+  background-size: 109px 109px;
+  background-position: 54px 55px, 10px 10px, 0px 0px, 0px 0px, 0px 0px,;
+  background-repeat: no-repeat;
+}
 }
 */
