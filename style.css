@@ -241,7 +241,7 @@ a.navigation-link {
   color: var(--dunkelpetrol);
   border: solid var(--hellestuerkis) 0.12rem;
   padding: 0.5rem;
-  margin: 1rem;
+  margin: 0.5rem;
   display: inline-block;
   transition: background-color 2s, transform 1s;
 }
@@ -281,14 +281,14 @@ a.navigation-link.special:hover {
     rgba(52, 160, 164, 1) 6%,
     rgba(30, 96, 145, 1) 75%
   );
-  padding-top: 2rem;
+  padding-top: 0.25rem;
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
 .heading-group {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .title {
@@ -321,8 +321,8 @@ a.btn-contact:hover {
 }
 
 .bild {
-  height: 10rem;
-  width: 10rem;
+  height: 8rem;
+  width: 8rem;
   border-radius: 100%;
   background-image: url(https://images.pexels.com/photos/10907619/pexels-photo-10907619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-size: cover;
