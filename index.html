@@ -39,7 +39,7 @@
             <a class="navigation-link" href="#contact">Contact me</a>
             <!--ToDo: Buttons springen nicht an die richtige Stelle. Bzw Header verdeckt den oberen Abschnitt-->
         </nav>
-        <aside>
+        <aside class="nebenelemente">
             <div class="bild"></div>
             <a class="btn-contact"
                 href="mailto:test@test-domain.de?subject=Hallo%20Freunde&body=Bitte%20trage%20hier%20alles%20ein.">E-Mail
@@ -52,7 +52,7 @@
 
     <main class="main">
         <!--primaerer Content der Seite-->
-        <article id="profile">
+        <article id="profile" class="mygrid">
             <h2 class="article-heading">Profile</h2>
             <p>
                 I travelled around the world and worked in many different jobs until I discovered that frontend
@@ -79,77 +79,88 @@
             </p>
         </article>
 
-        <article id="experiences">
+        <article id="experiences" class="mygrid">
             <h2 class="article-heading">Experiences</h2>
-            <section>
-                <header class="experience-title">
-                    <h3 class="section-heading">High School in California</h3>
-                    <p class="timeperiod">2000 - 2012</p>
-                </header>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-            </section>
+            <div class="content-wrapper">
+                <section>
+                    <header class="experience-title">
+                        <h3 class="section-heading">High School in California</h3>
+                        <p class="timeperiod">2000 - 2012</p>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                </section>
 
-            <section>
-                <header class="experience-title">
-                    <h3 class="section-heading">University: Bachelor of Arts in Communication Design</h3>
-                    <p class="timeperiod">2012 - 2015</p>
-                </header>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor <b>sit amet</b>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                    invidunt ut
-                    labore et dolore <i>magna aliquyam erat</i>, sed diam voluptua.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis possimus, culpa praesentium
-                    reprehenderit aspernatur doloribus quisquam ea quas sit porro cumque adipisci ducimus, unde
-                    consequatur corrupti aliquid molestias hic laboriosam.
-                </p>
-            </section>
+                <section>
+                    <header class="experience-title">
+                        <h3 class="section-heading">University: Bachelor of Arts in Communication Design</h3>
+                        <p class="timeperiod">2012 - 2015</p>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor <b>sit amet</b>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut
+                        labore et dolore <i>magna aliquyam erat</i>, sed diam voluptua.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis possimus, culpa praesentium
+                        reprehenderit aspernatur doloribus quisquam ea quas sit porro cumque adipisci ducimus, unde
+                        consequatur corrupti aliquid molestias hic laboriosam.
+                    </p>
+                </section>
 
-            <section>
-                <header class="experience-title">
-                    <h3 class="section-heading">Bachelor of Science in Applied Computer Science</h3>
-                    <p class="timeperiod">2015 - 2022</p>
-                </header>
-                <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod <strong>tempor invidunt ut labore</strong> et dolore magna aliquyam erat, sed
-                    diam voluptua. At
-                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                    sanctus est Lorem ipsum dolor sit amet.</p>
-            </section>
+                <section>
+                    <header class="experience-title">
+                        <h3 class="section-heading">Bachelor of Science in Applied Computer Science</h3>
+                        <p class="timeperiod">2015 - 2022</p>
+                    </header>
+                    <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        takimata
+                        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed
+                        diam nonumy eirmod <strong>tempor invidunt ut labore</strong> et dolore magna aliquyam erat, sed
+                        diam voluptua. At
+                        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                        sanctus est Lorem ipsum dolor sit amet.</p>
+                </section>
+            </div>
         </article>
 
-        <article id="skills">
+        <article id="skills" class="mygrid">
             <h2 class="article-heading">Skills</h2>
-            <section id="technical-skills">
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li>HMTL</li>
-                    <li>CSS</li>
-                    <li>Python</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Softskills</h3>
-                <ul>
-                    <li>Teamplayer</li>
-                    <li>creative</li>
-                    <li>durable</li>
-                </ul>
-            </section>
+            <div class="content-wrapper">
+                <section id="technical-skills">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>HMTL</li>
+                        <li>CSS</li>
+                        <li>Python</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Softskills</h3>
+                    <ul>
+                        <li>Teamplayer</li>
+                        <li>creative</li>
+                        <li>durable</li>
+                    </ul>
+                </section>
+            </div>
         </article>
 
-        <article id="contact">
+        <article id="contact" class="mygrid">
             <h2 class="article-heading">Contact</h2>
-            <section id="contact-infoormation">
-                <ul>
-                    <li>post adress: Bakerstreet 22 a, 127589 London, England</li>
-                    <li>e-mail: <a href="mailto:cv@peter-pan.de">cv@peter-pan.de</a></li>
-                    <li>phone: <a href="tel:0168 741 548 678">0168 741 548 678</a></li>
-                </ul>
-            </section>
+            <div class="content-wrapper">
+                <section id="contact-infoormation">
+                    <ul>
+                        <li>post adress: Bakerstreet 22 a, 127589 London, England</li>
+                        <li>e-mail: <a href="mailto:cv@peter-pan.de">cv@peter-pan.de</a></li>
+                        <li>phone: <a href="tel:0168 741 548 678">0168 741 548 678</a></li>
+                    </ul>
+                </section>
+            </div>
         </article>
 
     </main>

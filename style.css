@@ -348,28 +348,6 @@ p.timeperiod {
 .section-heading {
   display: inline;
 }
-@media print {
-  html {
-    color: black;
-  }
-  body {
-    background-color: white;
-  }
-  nav,
-  aside,
-  .bild,
-  footer {
-    display: none;
-  }
-
-  article + article {
-    border-top: 0.25rem black dotted;
-  }
-
-  .myheader {
-    background-color: #ccc;
-  }
-}
 
 .experience-title {
   display: flex;
@@ -431,6 +409,31 @@ p.timeperiod {
   transform: scale(1.4);
 }
 
+/*-----------------------------------------------------------------*/
+
+@media print {
+  html {
+    color: black;
+  }
+  body {
+    background-color: white;
+  }
+  nav,
+  aside,
+  .bild,
+  footer {
+    display: none;
+  }
+
+  article + article {
+    border-top: 0.25rem black dotted;
+  }
+
+  .myheader {
+    background-color: #ccc;
+  }
+}
+
 /* medium breakpoint */
 @media screen and (min-width: 786px) {
   html {
@@ -451,6 +454,11 @@ p.timeperiod {
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
+  }
+
+  .mygrid {
+    display: grid;
+    grid-template-columns: auto 1fr;
   }
 }
 
@@ -478,6 +486,11 @@ p.timeperiod {
 
   .myheader:hover .btn-contact {
     transform: translate(-75%, 50%) scale(1.5);
+  }
+
+  .mygrid {
+    display: grid;
+    grid-template-columns: auto 1fr;
   }
 }
 
