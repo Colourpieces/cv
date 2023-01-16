@@ -70,6 +70,8 @@ html {
 body {
   margin: 0;
   background-color: var(--hintergrund-text);
+
+  position: relative;
 }
 
 h1 {
@@ -273,6 +275,8 @@ a.navigation-link.special:hover {
 }
 
 .myheader {
+  display: grid;
+
   text-align: center;
   /*background-color: rgb(89, 6, 168);*/
   background: rgb(52, 160, 164);
@@ -282,9 +286,6 @@ a.navigation-link.special:hover {
     rgba(30, 96, 145, 1) 75%
   );
   padding-top: 0.25rem;
-  position: sticky;
-  top: 0;
-  z-index: 1;
 }
 
 .heading-group {
@@ -297,12 +298,20 @@ a.navigation-link.special:hover {
 
 .subtitle {
   font-size: 0.25em;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(0deg, red, green);
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .navigation {
   display: flex;
   flex-direction: column;
   align-items: space-evenly;
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 a.btn-contact {
@@ -318,6 +327,10 @@ a.btn-contact {
 
 a.btn-contact:hover {
   background-color: darkorange;
+}
+
+.nebenelemente {
+  justify-self: center;
 }
 
 .bild {
@@ -479,18 +492,35 @@ p.timeperiod {
   }
 
   .bild {
-    position: absolute;
-    top: 3rem;
-    left: 20ch;
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .myheader {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .myheader > * {
+    grid-column: 2;
   }
 
   .myheader:hover .btn-contact {
     transform: translate(-75%, 50%) scale(1.5);
   }
 
+  .nebenelemente {
+    display: contents;
+  }
+
   .mygrid {
     display: grid;
     grid-template-columns: auto 1fr;
+  }
+
+  .navigation {
+    grid-column: 1 / span 3; /* oder: 1/4  oder 1/-1 --> nimmt alles was da ist  */
   }
 }
 
