@@ -71,6 +71,8 @@ body {
   margin: 0;
   background-color: var(--hintergrund-text);
 
+  scroll-margin-top: -120px;
+
   position: relative;
 }
 
@@ -85,10 +87,7 @@ h2 {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   font-family: "La Belle Aurore", cursive;
 }
 
@@ -145,39 +144,53 @@ nav {
   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 }
 
-footer {
-  height: 4rem;
-  text-align: center;
-  padding-top: 0.2rem;
+.navigation {
+  display: flex;
+  flex-direction: column;
 
-  background: radial-gradient(var(--tuerkis) 3px, transparent 4px),
-    radial-gradient(var(--tuerkis) 3px, transparent 4px),
-    linear-gradient(var(--dunkelpetrol) 4px, transparent 0),
-    linear-gradient(
-      45deg,
-      transparent 74px,
-      transparent 75px,
-      var(--tuerkis) 75px,
-      var(--tuerkis) 76px,
-      transparent 77px,
-      transparent 109px
-    ),
-    linear-gradient(
-      -45deg,
-      transparent 75px,
-      transparent 76px,
-      var(--tuerkis) 76px,
-      var(--tuerkis) 77px,
-      transparent 78px,
-      transparent 109px
-    ),
-    var(--dunkelpetrol);
-  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
-  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-.footer-contact::before {
-  content: ":purple_heart:";
+.navigation-link {
+  margin-right: 6rem;
+  width: 17ch;
+  background-color: var(--gelbgruen);
+  color: var(--dunkelpetrol);
+  border: solid var(--hellestuerkis) 0.12rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  display: inline-block;
+  transition: background-color 2s, transform 1s;
+}
+
+a.navigation-link:link {
+  text-decoration: none;
+}
+
+a.navigation-link:visited {
+  color: darkorange;
+}
+
+a.navigation-link:hover {
+  background-color: var(--petrol);
+  transform: scale(1.1);
+}
+
+a.navigation-link:focus {
+  background-color: var(--mint);
+  border: solid darkorange 0.12rem;
+}
+
+a.navigation-link:focus-within {
+  transform: skew(20deg);
+}
+
+a.navigation-link.special:hover {
+  background-color: greenyellow;
 }
 
 article {
@@ -237,43 +250,6 @@ article > * {
   border-radius: 0.5rem;
 }
 
-a.navigation-link {
-  margin-right: 6rem;
-  background-color: var(--gelbgruen);
-  color: var(--dunkelpetrol);
-  border: solid var(--hellestuerkis) 0.12rem;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  display: inline-block;
-  transition: background-color 2s, transform 1s;
-}
-
-a.navigation-link:link {
-  text-decoration: none;
-}
-
-a.navigation-link:visited {
-  color: darkorange;
-}
-
-a.navigation-link:hover {
-  background-color: var(--petrol);
-  transform: scale(1.1);
-}
-
-a.navigation-link:focus {
-  background-color: var(--mint);
-  border: solid darkorange 0.12rem;
-}
-
-a.navigation-link:focus-within {
-  transform: skew(20deg);
-}
-
-a.navigation-link.special:hover {
-  background-color: greenyellow;
-}
-
 .myheader {
   display: grid;
 
@@ -300,18 +276,8 @@ a.navigation-link.special:hover {
   font-size: 0.25em;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(0deg, red, green);
-  color: rgba(0, 0, 0, 0.2);
-}
-
-.navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: space-evenly;
-
-  position: sticky;
-  top: 0;
-  z-index: 1;
+  background-image: linear-gradient(90deg, orange, rgb(114, 80, 162));
+  color: transparent;
 }
 
 a.btn-contact {
@@ -337,8 +303,9 @@ a.btn-contact:hover {
   height: 8rem;
   width: 8rem;
   border-radius: 100%;
-  background-image: url(https://images.pexels.com/photos/10907619/pexels-photo-10907619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-  background-size: cover;
+  /* background-image: url(https://images.pexels.com/photos/10907619/pexels-photo-10907619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+  /* background-size: cover; */
+  overflow: hidden;
   background-position: top right;
   border: 0.2rem solid var(--dunkelblau);
   align-items: center;
@@ -422,6 +389,40 @@ p.timeperiod {
   transform: scale(1.4);
 }
 
+footer {
+  height: 4rem;
+  text-align: center;
+  padding-top: 0.2rem;
+
+  background: radial-gradient(var(--tuerkis) 3px, transparent 4px),
+    radial-gradient(var(--tuerkis) 3px, transparent 4px),
+    linear-gradient(var(--dunkelpetrol) 4px, transparent 0),
+    linear-gradient(
+      45deg,
+      transparent 74px,
+      transparent 75px,
+      var(--tuerkis) 75px,
+      var(--tuerkis) 76px,
+      transparent 77px,
+      transparent 109px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75px,
+      transparent 76px,
+      var(--tuerkis) 76px,
+      var(--tuerkis) 77px,
+      transparent 78px,
+      transparent 109px
+    ),
+    var(--dunkelpetrol);
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+.footer-contact::before {
+  content: "\1F49C"; /*💜  128156  https://www.w3schools.com/charsets/ref_emoji.asp */
+}
 /*-----------------------------------------------------------------*/
 
 @media print {
