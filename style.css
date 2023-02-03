@@ -71,8 +71,7 @@ body {
   margin: 0;
   background-color: var(--hintergrund-text);
 
-  scroll-margin-top: -120px;
-
+  min-width: 300px;
   position: relative;
 }
 
@@ -92,6 +91,7 @@ h3 {
 }
 
 *::selection {
+  /* beim Text markieren */
   background-color: plum;
   color: beige;
 }
@@ -111,6 +111,13 @@ a:hover {
 a:active {
   /*Element wird gerade aktiviert*/
   color: darkorange;
+}
+
+:target {
+  /* damit Text unter Header springt mit Sprungmarken /Navigation
+  und nicht unter header verschwindet */
+
+  scroll-margin-top: 5rem;
 }
 
 nav {
@@ -145,8 +152,9 @@ nav {
 }
 
 .navigation {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 
   align-items: center;
 
@@ -205,18 +213,9 @@ section + header {
   display: inline;
 }
 
-/*section header > * {
-  display: inline-block;
-  border: 1px solid red;
-}*/
-
 article > * {
   padding-left: 2rem;
 }
-
-/*article > h2 {
-  padding-left: 0;
-}*/
 
 .main {
   margin: 0 auto;
@@ -254,7 +253,6 @@ article > * {
   display: grid;
 
   text-align: center;
-  /*background-color: rgb(89, 6, 168);*/
   background: rgb(52, 160, 164);
   background: linear-gradient(
     90deg,
@@ -276,7 +274,7 @@ article > * {
   font-size: 0.25em;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(90deg, orange, rgb(114, 80, 162));
+  background-image: linear-gradient(90deg, rgb(114, 80, 162), orange);
   color: transparent;
 }
 
@@ -295,26 +293,21 @@ a.btn-contact:hover {
   background-color: darkorange;
 }
 
-.nebenelemente {
-  justify-self: center;
-}
-
 .bild {
   height: 8rem;
   width: 8rem;
   border-radius: 100%;
-  /* background-image: url(https://images.pexels.com/photos/10907619/pexels-photo-10907619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
-  /* background-size: cover; */
   overflow: hidden;
   background-position: top right;
   border: 0.2rem solid var(--dunkelblau);
   align-items: center;
 }
 
+/*
 .article-heading {
   position: relative;
   left: -2rem;
-}
+}*/
 
 /*
 p.timeperiod {
@@ -459,7 +452,7 @@ footer {
   }
 
   .navigation {
-    flex-direction: row;
+    display: flex;
     justify-content: center;
   }
 
@@ -526,7 +519,7 @@ footer {
 }
 
 @media screen and (prefers-color-scheme: dark) {
-  body {
+  :root {
     --hintergrund-text: var(--blau);
     --normaler-text: white;
     --ueberschrift: var(--gelbgruen);
